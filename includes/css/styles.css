@@ -1,0 +1,157 @@
+/*
+
+My Custom CSS
+=============
+
+Author:  Pedro Matias
+Updated: 14/10/2014
+
+
+*/
+html {margin: 0; padding: 0; overflow: hidden;}
+			html { 
+			  background: url(images/mousedrk.jpg) no-repeat center center fixed; 
+			  -webkit-background-size: cover;
+			  -moz-background-size: cover;
+			  -o-background-size: cover;
+			  background-size: cover;
+			}
+			body {
+					text-align: center;
+					list-style-type: none;
+					text-decoration: none;
+					-webkit-font-smoothing: antialiased;
+					text-rendering: optimizelegibility;
+				}
+			.well{
+				background: url(images/mousedrk.jpg) no-repeat center center fixed; 
+			  -webkit-background-size: cover;
+			  -moz-background-size: cover;
+			  -o-background-size: cover;
+			  background-size: cover;
+			}
+			#manutencao {
+				color: #FFF;
+			}
+			.main {
+					padding-top: 10em;	
+					padding-bottom: 10em;
+					text-align: center;
+				}	
+			.main
+			{
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: 100%;
+				height: 100%;
+				background: url('images/overlay.png');
+				border-radius: 8px;
+			}
+/* --------------------------------------
+   Typography
+   -------------------------------------- */
+
+/* --------------------------------------
+   Layout
+   -------------------------------------- */
+#featuresHeading {
+	margin-top:0px;
+
+	}
+
+#features {
+	text-align: center;
+	}
+#features {
+	margin: 0 0 20px;
+	}
+	
+#acederMail {
+	margin-bottom: 10px;
+	}
+footer {
+	background: #333;
+	color: #eee;
+	font-size: 11px;
+	padding: 20px;
+	}
+/* ---------------------------------------------------
+PAGINAS STYLES
+------------------------------------------------------------------*/
+
+/* ---------------------------------------------------
+pagina teamOnly Styles
+------------------------------------------------------------------*/
+
+/* ---------------------------------------------------
+					End of pagina teamOnly Styles
+------------------------------------------------------------------*/
+/* ---------------------------------------------------
+pagina storyboard Styles
+------------------------------------------------------------------*/
+
+/* ---------------------------------------------------
+End off pagina storyboard Styles
+------------------------------------------------------------------*/
+/* ---------------------------------------------------
+END OF PAGINAS STYLES
+------------------------------------------------------------------*/
+
+
+/* ----------------------
+   Header - well
+   ---------------------- */
+.well {
+	margin:5px 0px;
+	}
+.well .page-header {
+	margin-top: 0px;
+	}
+.well .page-header h1 {
+	margin-top: 0px;
+	}
+
+/*---------
+Tchanan
+----------*/
+#tchanan-row {
+	margin-top: 55px;
+	margin-bottom: 5px;
+	}
+.tchanan {
+	position: relative;
+	padding-bottom: 56.25%;
+	background: red;
+	}
+	
+.tchanan iframe {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	}
+/* 
+
+   
+/*------------Buttons and stuff-----------------*/
+#botao { transition: 0.3s;	}
+			svg:hover #botao {fill: #FAA500;}
+/* --------------------------------------
+   Media Queries
+   -------------------------------------- */
+
+/* Portrait & landscape phone */
+@media (max-width: 480px) {
+	
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 768px) {
+	#myCarousel .item {height:310px; }
+
+
+
+/* Large desktop */
+@media (min-width: 1200px) {
+	#myCarousel .item {height:500px; }
+

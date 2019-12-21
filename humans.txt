@@ -1,0 +1,42 @@
+/* TEAM */
+
+Site: pedro.e-forma.pt
+
+Location: Cascais, Portugal.
+
+[...]
+
+Pedro Matias
+
+Site: pedro.e-forma.pt
+
+Twitter: https://twitter.com/pvmatias
+
+Location: Cascais, Portugal.
+
+[...]
+
+
+
+                        [...]
+
+
+
+/* THANKS */
+
+
+To all the friends that have supported us.
+
+
+
+                        [...]
+
+
+
+/* SITE */
+
+
+Standards: HTML5, CSS3, JS, JQuery
+
+
+Components: Bootstrap, Modernizr, jQuery, etc.

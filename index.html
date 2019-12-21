@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+
+<html><head>
+
+    <!--Google verify-->
+    <meta name="google-site-verification" content="Website under maintenance" />
+
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+
+		<!-- Website Title & Description for Search Engine purposes -->
+		<title>Under Maintenance - Luxury</title>
+
+        <meta charset="utf-8">
+		<meta name="description" content="">
+
+		<!-- Mobile viewport optimized -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<!-- Bootstrap CSS -->
+		<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+		<link href="includes/css/bootstrap-glyphicons.css" rel="stylesheet">
+
+		<!-- Custom CSS -->
+		<link href="includes/css/xpstyles.css" rel="stylesheet">
+
+		<!-- Include Modernizr in the head, before any other Javascript -->
+		<script src="includes/js/modernizr-2.6.2.min.js"></script>
+
+	</head>
+	<body>
+	<div class="wrapper">
+        <div class="container" id="main">
+            <div class="col-12">
+                    <div class="page-header">
+                        <img src="includes/css/images/luxury-logo.png">
+                        <h1 class="cuidado">THIS IS LUXURY</h1>
+                        <h3 class="cuidado">WEBSITE UNDER MAINTENANCE</h3>
+                        <h5 class="cuidado">We apologize for any inconvenience</h5>
+                   </div><!--end page-header-->
+                   <!--visivel apenas em small screen-->
+                    <div class="well well-small visible-sm">
+                        <a href="tel:(+351)210110101" class="btn btn-large btn-block btn-success"><span class="glyphicon glyphicon-phone"></span>Call us!</a>
+                    </div><!--end well-small-->
+            </div><!--end col-12-->
+            <!--Relogio-->
+                    <div class="col-12 cuidado">
+                        <p>We are running against the clock,<br />to serve you better!</p>
+                        <canvas id="canvas" width="200%" height="200%"
+                          style="background-color:#ffffff">
+                        </canvas>
+
+                        <script>
+                        var canvas = document.getElementById("canvas");
+                        var ctx = canvas.getContext("2d");
+                        var radius = canvas.height / 2;
+                        ctx.translate(radius, radius);
+                        radius = radius * 0.90
+                        setInterval(drawClock, 1000);
+
+                        function drawClock() {
+                          drawFace(ctx, radius);
+                          drawNumbers(ctx, radius);
+                          drawTime(ctx, radius);
+                        }
+
+                        function drawFace(ctx, radius) {
+                          var grad;
+                          ctx.beginPath();
+                          ctx.arc(0, 0, radius, 0, 2*Math.PI);
+                          ctx.fillStyle = 'white';
+                          ctx.fill();
+                          grad = ctx.createRadialGradient(0,0,radius*0.95, 0,0,radius*1.05);
+                          grad.addColorStop(0, '#696969');
+                          grad.addColorStop(0.5, 'white');
+                          grad.addColorStop(1, '#696969');
+                          ctx.strokeStyle = grad;
+                          /*ctx.lineWidth = radius*0.1;*/
+                          ctx.stroke();
+                          ctx.beginPath();
+                          ctx.arc(0, 0, radius*0.1, 0, 2*Math.PI);
+                          ctx.fillStyle = '#696969';
+                          ctx.fill();
+                        }
+
+                        function drawNumbers(ctx, radius) {
+                          var ang;
+                          var num;
+                          ctx.font = radius*0.15 + "px";
+                          ctx.textBaseline="middle";
+                          ctx.textAlign="center";
+                          for(num = 1; num < 13; num++){
+                            ang = num * Math.PI / 6;
+                            ctx.rotate(ang);
+                            ctx.translate(0, -radius*0.85);
+                            ctx.rotate(-ang);
+                            ctx.fillText(num.toString(), 0, 0);
+                            ctx.rotate(ang);
+                            ctx.translate(0, radius*0.85);
+                            ctx.rotate(-ang);
+                          }
+                        }
+
+                        function drawTime(ctx, radius){
+                            var now = new Date();
+                            var hour = now.getHours();
+                            var minute = now.getMinutes();
+                            var second = now.getSeconds();
+                            //hour
+                            hour=hour%12;
+                            hour=(hour*Math.PI/6)+
+                            (minute*Math.PI/(6*60))+
+                            (second*Math.PI/(360*60));
+                            drawHand(ctx, hour, radius*0.5, radius*0.07);
+                            //minute
+                            minute=(minute*Math.PI/30)+(second*Math.PI/(30*60));
+                            drawHand(ctx, minute, radius*0.8, radius*0.07);
+                            // second
+                            second=(second*Math.PI/30);
+                            drawHand(ctx, second, radius*0.9, radius*0.02);
+                        }
+
+                        function drawHand(ctx, pos, length, width) {
+                            ctx.beginPath();
+                            ctx.lineWidth = width;
+                            ctx.lineCap = "round";
+                            ctx.moveTo(0,0);
+                            ctx.rotate(pos);
+                            ctx.lineTo(0, -length);
+                            ctx.stroke();
+                            ctx.rotate(-pos);
+                        }
+                        </script>
+
+                    </div><!--end col-12-->
+
+            <!--2 mensagem-->
+                    <div class="col-12">
+                        <h3 class="cuidado">Send us a message</h3>
+                    </div>
+
+             <!--msg icon-->
+                    <div class="page-header">
+                            <a href="#pmModal" id="myRole" role="button" data-toggle="modal"><div id="modal-launcher" data-toggle="modal">
+
+                        <!--button id="modal-launcher">Launch Modal Window</button-->
+
+                        <svg version="1.2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                             x="0px" y="0px" width="50px" height="47" viewBox="0 0 90 84.618" xml:space="preserve">
+                        <path fill="#4d4d4d" id="botao" d="M27.279,53.711l18.119,15.047l-0.041,0.035L27.279,53.711z M45.378,65.196L29.016,51.609l16.327,13.618
+                            L45.378,65.196z M90,29.687v54.931H0V29.682l9.622-6.307V8.319h22.97L45.284,0l12.53,8.319h22.558v14.976L90,29.687z M80.373,35.63
+                            l5.998-5.079l-5.998-3.982V35.63z M37.566,8.319h15.317l-7.61-5.052L37.566,8.319z M12.35,37.708l16.666,13.901l16.327,13.618
+                            l0.036-0.031l32.268-27.479V24.759v-3.274V11.046H61.922h-4.931H33.406h-4.975H12.35v10.542v3.261V37.708z M3.652,30.549l5.97,4.957
+                            v-8.869L3.652,30.549z M87.273,33.36l-41.84,35.428l-0.035-0.029L27.279,53.711L2.727,33.323v48.568h84.547V33.36L87.273,33.36z
+                             M44.797,50.741c-7.066,0-13.057-5.173-13.057-13.447c0-8.878,6.16-16.549,15.73-16.549c7.498,0,12.541,5.257,12.541,12.454
+                            c0,6.465-3.621,10.258-7.673,10.258c-1.726,0-3.319-1.164-3.188-3.793h-0.172c-1.508,2.543-3.492,3.793-6.078,3.793
+                            c-2.498,0-4.653-2.026-4.653-5.432c0-5.343,4.224-10.212,10.215-10.212c1.851,0,3.49,0.388,4.608,0.905l-1.463,7.8
+                            c-0.647,3.275-0.131,4.785,1.293,4.827c2.197,0.045,4.654-2.887,4.654-7.887c0-6.248-3.748-10.731-10.43-10.731
+                            c-7.023,0-12.928,5.561-12.928,14.307c0,7.197,4.695,11.635,11.074,11.635c2.457,0,4.74-0.517,6.508-1.508l0.689,1.854
+                            C50.098,50.266,47.686,50.741,44.797,50.741z M50.098,30.398c-0.43-0.128-1.164-0.302-2.154-0.302c-3.791,0-6.852,3.576-6.852,7.758
+                            c0,1.896,0.946,3.275,2.846,3.275c2.498,0,4.781-3.188,5.256-5.862L50.098,30.398z"/>
+                        </svg>
+                    </div></a><!--page header-->
+
+                    <!--modal-->
+                    <div class="modal fade" id="pmModal">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button class="close" data-dismiss="modal">&times;</button>
+                                    <h4 class="modal-title">Send us a message</h4>
+                                </div><!--/modal header-->
+                                <div class="modal-body">
+
+                                    <p><small class="text-muted">We will reply as soon as possible.</small></p>
+
+                                    <form class="form-horizontal" name="commentform" method="post" action="mail/mail.php">
+                                        <div class="form-group">
+                                            <label class="control-label col-md-4" for="name">Name</label>
+                                            <div class="col-md-6">
+                                                <input type="text" class="form-control" id="name" name="name" placeholder="Name"/>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-md-4" for="phone">phone</label>
+                                            <div class="col-md-6">
+                                                <input type="text" class="form-control" id="phone" name="phone" placeholder="phone"/>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-md-4" for="email">Email Address</label>
+                                            <div class="col-md-6 input-group">
+                                            <span class="input-group-addon">@</span>
+                                                <input type="email" class="form-control" id="email" name="email" placeholder="Email Address"/>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-md-4" for="message">Question or Comment</label>
+                                            <div class="col-md-6">
+                                                <textarea rows="6" class="form-control" id="message" name="message" placeholder="Your message here"></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="col-md-6">
+                                                <button type="submit" value="Submit" class="btn btn-custom pull-right btn-success">Send</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                    <div class="col-lg-offset-2 col-lg-10">
+
+                                    </div>
+
+                                </div>
+
+                            </form>
+                                </div><!--/ modal body-->
+                                <div class="modal-footer">
+
+                                </div><!--/modal footer-->
+                            </div><!--/modal content-->
+                        </div><!--/modal dialog-->
+                    </div><!--end pmModal-->
+        </div><!--/container main-->
+    	<div class="push"></div>
+	</div><!--wrapper-->
+
+<footer>
+	<div class="container">
+    	<div class="row">
+        	<div class="col-sm-4">
+            	<p style="font-sise: 9px;"><small>The 'Under Mantainance - Luxury' website is designed by <strong><a href="http://pedro.e-forma.pt">Pedro Matias</a></strong> licensed as Creative Commons – Attribution (CC BY 3.0)</small></small></p>
+            </div><!--/ col-sm-2-->
+
+            <div class="col-sm-4">
+            	<h6>Find us</h6>
+                <ul class="list-unstyled">
+                	<li><a href="#">Facebook</a></li>
+                    <li><a href="#">Twiter</a></li>
+                    <li><a href="#">Google Plus</a></li>
+                    <li><a href="#">Youtube</a></li>
+
+                </ul>
+            </div><!--/col-sm-2-->
+            <div class="col-sm-4">
+                <ul class="list-unstyled">
+                	<h6>Created with <span class="glyphicon glyphicon-heart"><br /><a href="https://portugalmultimedia.pt">by Portugal Multimedia</a></span></h6>
+                </ul>
+            </div><!--/col-sm-2-->
+        </div><!--/row-->
+    </div><!--/ container-->
+</footer>
+
+
+	<!-- All Javascript at the bottom of the page for faster page loading -->
+
+	<!-- First try for the online version of jQuery-->
+	<script src="http://code.jquery.com/jquery.js"></script>
+
+	<!-- If no online access, fallback to our hardcoded version of jQuery -->
+	<script>window.jQuery || document.write('<script src="includes/js/jquery-1.8.2.min.js"><\/script>')</script>
+
+	<!-- Bootstrap JS -->
+	<script src="bootstrap/js/bootstrap.min.js"></script>
+
+	<!-- Custom JS -->
+	<script src="includes/js/script.js"></script>
+
+	</body>
+</html>
